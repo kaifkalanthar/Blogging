@@ -6,6 +6,8 @@ import HomePage from './component/homePags';
 import Blogs from './component/allBlog';
 import SignUp from './component/signUp';
 import Login from './component/logIn';
+import BlogForm from './component/blogForm';
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
           <Route path='/blog' Component={Blogs} />
           <Route path='/sign-up' Component={SignUp} />
           <Route path='/login' Component={Login} />
+          <Route path='/create-post/new-post' Component={BlogForm} />
         </Routes>
       </main>
     </React.Fragment >

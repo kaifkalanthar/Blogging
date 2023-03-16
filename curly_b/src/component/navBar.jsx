@@ -18,9 +18,8 @@ class NavBar extends Component {
                     <div id="menu-container">
                         <ul id="menu-lists" className={clicked ? "#menu-lists active" : "menu-lists"}>
                             <li id="menu-list"><NavLink id="menu-item" to='/'>Home</NavLink></li>
-                            <li id="menu-list"><NavLink id="menu-item" to='/blog'>Blog</NavLink></li>
-                            <li id="menu-list"><NavLink id="menu-item" to='/sign-up'>SignUp</NavLink></li>
-                            <li id="menu-list"><NavLink id="menu-item" to='/sign-in'>Login</NavLink></li>
+                            <li id="menu-list"><NavLink id="menu-item" to='/blog'>Blog</NavLink></li>                            <li id="menu-list"><NavLink id="menu-item" to='/sign-up'>SignUp</NavLink></li>
+                            <li id="menu-list"><NavLink id="menu-item" to='/login'>Login</NavLink></li>
                         </ul>
                     </div>
                     <div id="mobile">

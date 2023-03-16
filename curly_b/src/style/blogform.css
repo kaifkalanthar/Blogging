@@ -1,0 +1,40 @@
+#form {
+    border-color: #111;
+    border-width: 2px;
+    border-style: inset;
+    border-radius: 10px;
+    width: 700px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px 0px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#getter {
+    width: 500px;
+    height: 40px;
+    margin: 10px 0px;
+    padding-left: 30px;
+}
+
+#quill {
+    width: 550px;
+    margin: 10px 0px;
+}
+
+#publish-button {
+    width: 230px;
+    height: 40px;
+    font-size: 16px;
+    background: #AC66CC;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
