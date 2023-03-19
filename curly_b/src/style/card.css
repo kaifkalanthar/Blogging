@@ -1,6 +1,7 @@
 .card {
     width: 24rem;
     margin: 20px;
+    min-height: 400px;
 }
 
 #read-btn {
@@ -9,4 +10,7 @@
     text-decoration: none;
     border-radius: 10px;
     color: #fff;
+}
+#card-img {
+    min-height: 250px;
 }

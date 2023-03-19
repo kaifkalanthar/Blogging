@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Cards from '../common/cards';
 import '../style/allBlog.css';
-
-
 
 
 const Blogs = () => {
@@ -15,8 +12,8 @@ const Blogs = () => {
             response.json().then(posts => {
                 setPosts(posts);
             })
-        })
-    }, [])
+        });
+    }, []);
     return (
         <React.Fragment>
 
