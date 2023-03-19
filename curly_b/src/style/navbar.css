@@ -61,6 +61,16 @@ li => a -> menu-items
 }
 
 @media screen and (max-width : 768px) {
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #FFFFFF;
+        padding: 20px 30px;
+        box-shadow: 0px 5px 5px 4px rgba(0, 0, 0, 0.14);
+        font-family: 'Poppins', sans-serif;
+    }
     #menu-lists {
         display: flex;
         flex-direction: column;
@@ -83,7 +93,7 @@ li => a -> menu-items
         align-items: flex-start;
         justify-content: flex-start;
         position: fixed;
-        top: 90px;
+        top: 101px;
         right: 0px;
         width: 300px;
         height: 100vh;
