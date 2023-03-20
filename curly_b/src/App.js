@@ -4,9 +4,9 @@ import NavBar from './component/navBar';
 import HomePage from './component/homePags';
 import Blogs from './component/allBlog';
 import SignUp from './component/signUp';
-import Login from './component/logIn';
 import BlogForm from './component/blogForm';
 import PostPage from './component/postPage';
+import Login from './component/logIn';
 import './App.css';
 
 
@@ -22,6 +22,7 @@ function App() {
           <Route path='/sign-up' Component={SignUp} />
           <Route path='/login' Component={Login} />
           <Route path='/create-post/new-post' Component={BlogForm} />
+
         </Routes>
       </main>
     </React.Fragment >

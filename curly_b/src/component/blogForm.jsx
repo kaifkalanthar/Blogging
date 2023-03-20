@@ -41,7 +41,7 @@ function BlogForm() {
     }
         return (
             <React.Fragment>
-                <div id="form">
+                <div id="post-form">
                     <form id="container" onSubmit={doSumbit}>
                         <h1>Create Blog</h1>
                         <input
