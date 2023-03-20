@@ -1,0 +1,16 @@
+.card {
+    width: 24rem;
+    margin: 20px;
+    min-height: 400px;
+}
+
+#read-btn {
+    background-color: #AC66CC;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #fff;
+}
+#card-img {
+    min-height: 250px;
+}
