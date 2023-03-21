@@ -8,6 +8,7 @@ import BlogForm from './component/blogForm';
 import PostPage from './component/postPage';
 import Login from './component/logIn';
 import './App.css';
+import Logout from './component/Logout';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path='/blog/:id' Component={PostPage} />
           <Route path='/sign-up' Component={SignUp} />
           <Route path='/login' Component={Login} />
+          <Route path='/logout' Component={Logout} />
           <Route path='/create-post/new-post' Component={BlogForm} />
 
         </Routes>
