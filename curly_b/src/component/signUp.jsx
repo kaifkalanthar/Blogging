@@ -16,8 +16,9 @@ class SignUp extends Form {
 
     doSubmit = async () => {
         const { data } = this.state;
-        const res = await userService.register(data);
-        window.location = "/";
+        await userService.register(data);
+        window.location = "/login";
+        alert("Login to continue...")
     }
 
     render() {

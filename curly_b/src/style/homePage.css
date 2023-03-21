@@ -55,7 +55,7 @@ header .logo {
     align-items: center;
     background: #AC66CC;
     transition: 0.5s;
-    z-index: 2;
+    z-index: -1;
 }
 
 .showcase.active {

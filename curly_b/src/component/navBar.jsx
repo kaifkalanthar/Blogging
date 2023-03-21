@@ -35,7 +35,6 @@ class NavBar extends Component {
             credentials: 'include',
             method: 'POST',
         });
-        const { userInfo } = this.state;
         this.setState({ userInfo: null })
     }
 

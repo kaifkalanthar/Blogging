@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../style/card.css';
 
 function Cards({ posts }) {
@@ -14,7 +14,7 @@ function Cards({ posts }) {
                             <p className="card-text">
                                 {post.summary}
                             </p>
-                            <Link to={`/blog/${post._id}`} id="read-btn" >Read</Link>
+                            <NavLink to={`/blog/${post._id}`} id="read-btn" >Read</NavLink>
                         </div>
                     </div>
                 </div>
