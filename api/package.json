@@ -16,6 +16,7 @@
   },
   
     "scripts": {
-      "build": "netlify deploy --prod"
+      "dev": "nodeman index.js",
+      "build": "npm i"
     }
   }
