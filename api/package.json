@@ -16,7 +16,8 @@
   },
   
     "scripts": {
-      "dev": "nodeman index.js",
+      "start": "npm run server",
+      "dev": "nodemon index.js",
       "build": "npm i"
     }
   }
