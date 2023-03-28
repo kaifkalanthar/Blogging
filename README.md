@@ -1,4 +1,4 @@
-## 1.Curly_B - "Where Reading Meets Learning"
+# 1. Curly_B - "Where Reading Meets Learning"
 <ul>
   <li>Built with React.js, Node.js, MongoDB, npm, and Bootstrap</li>
   <li>User authentication feature allows users to register and log in to the site</li>
@@ -17,4 +17,4 @@
 ![](https://user-images.githubusercontent.com/77534625/228042968-739d180a-ed06-4688-9a27-7c260e2aa005.png)<br/>
 ![](https://user-images.githubusercontent.com/77534625/228042972-f8cfe423-7b19-441c-a82c-505d7ff05b9e.png)<br/>
 ![](https://user-images.githubusercontent.com/77534625/228042977-4e96bef3-2d3d-4d0b-a01d-8f3b05ea5dee.png)<br/>
-![](https://user-images.githubusercontent.com/77534625/228042980-6bf0c2cd-e5b5-4ab6-8ad1-7a9cea5aa33e.png)<br/>
+
