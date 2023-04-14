@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,700;1,200;1,300;1,400;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    $bodyBackground : #1A1A1B;
+    $navBarBackground : #292929;
+    $stock : #3B3B3B;
+    font-family: 'IBM Plex Mono', monospace;
+    scroll-behavior: smooth;
+    background: $bodyBackground;
+    color: #fff;
+    overflow-x: hidden;
+
+    .btn {
+        width: 120px;
+        height: 50px;
+        border: 2px solid $stock;
+        font-size: 16px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        width: 120px;
+        height: 50px;
+        background: #1f1f1f;
+        border: 2px solid $stock;
+        font-size: 16px;
+        color: #fff;
+        transition: 0.2s ease;
+    }
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $navBarBackground;
+        padding: 40px;
+        width: 100%;
+        border-bottom: 2px solid $stock;
+
+        .nav-logo {
+            font-size: 36px;
+        }
+
+        .menu-lists {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            font-weight: 100;
+            align-items: center;
+
+            .menu-list {
+                align-items: center;
+            }
+
+            .menu-item {
+                color: #fff;
+                text-decoration: none;
+                font-size: 22px;
+                padding: 0px 20px;
+            }
+        }
+
+        #toggle {
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+        }
+    }
+
+    .hero-container {
+        margin: 0 10%;
+        display: flex;
+        padding: 70px 0 0 0;
+        column-gap: 20px;
+
+        .header-content {
+            width: 50%;
+
+            .hero-header {
+                font-size: 45px;
+            }
+
+            #explore-btn {
+                margin-top: 10px;
+            }
+        }
+
+        .body-content {
+            width: 50%;
+
+            .input {
+                width: 400px;
+                height: 55px;
+                border-radius: 10px;
+                outline: none;
+                padding: 20px;
+                border: 2px solid $stock;
+                background: none;
+                margin-bottom: 10px;
+                color: #fff;
+            }
+        }
+    }
+
+    @media screen and (max-width: 820px) {
+        .nav-container {
+            padding: 20px;
+            overflow-x: hidden;
+
+            .nav-logo {
+                font-size: 28px;
+            }
+
+            #toggle {
+                display: block;
+            }
+
+            .menu-lists {
+                flex-direction: column;
+                position: absolute;
+                top: 92px;
+                height: 50vh;
+                width: 300px;
+                background: $navBarBackground;
+                align-items: start;
+                border-left: 2px solid $stock;
+                border-bottom: 2px solid $stock;
+                transition: 0.3s ease-in;
+                display: none;
+                right: 0;
+
+                .menu-list {
+                    padding: 20px 0;
+                }
+            }
+        }
+
+        .hero-container {
+            flex-wrap: wrap;
+
+            .header-content {
+                width: 100%;
+            }
+
+            .body-content {
+                padding: 10px 0;
+                width: 100%;
+
+                .input {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

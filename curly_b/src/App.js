@@ -1,9 +1,12 @@
 import React from 'react';
+import NavBar from './components/navBar';
+import HeroSection from './components/heroSection';
 
 function App() {
   return (
     <React.Fragment>
-      <h1>Hey! kaif</h1>
+      <NavBar />
+      <HeroSection />
     </React.Fragment >
   );
 }
