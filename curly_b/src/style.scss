@@ -108,6 +108,79 @@ body {
         }
     }
 
+.recent-blogs {
+    margin: 0 10%;
+    padding: 40px 0;
+
+    .recent-blogs-header {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .recent-blogs-container {
+        display: flex;
+        column-gap: 10px;
+
+        .most-recent {
+            width: 48%;
+            border: 2px solid $stock;
+            border-radius: 10px;
+
+            .blog-title {
+                font-weight: bold;
+            }
+
+            .timestamp {
+                color: $stock;
+            }
+
+            .blog-description {
+                font-weight: lighter;
+            }
+
+            .l-img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .m-blog-content {
+                padding: 20px;
+            }
+        }
+
+        .recent-two {
+            width: 50%;
+
+            .recent-two-container {
+                display: flex;
+                border: 2px solid $stock;
+                border-radius: 10px;
+                column-gap: 10px;
+                margin-bottom: 10px;
+
+                .m-img {
+                    object-fit: cover;
+                    border-radius: 10px;
+                    width: 50%;
+
+                }
+
+                .blog-content {
+                    margin: auto;
+
+                    .blog-title {
+                        font-weight: bold;
+                        font-size: 26px;
+                    }
+
+                    .timestamp {
+                        color: $stock;
+                    }
+                }
+            }
+        }
+    }
+}
     @media screen and (max-width: 820px) {
         .nav-container {
             padding: 20px;
@@ -158,4 +231,42 @@ body {
             }
         }
     }
+@media screen and (max-width: 871px) {
+    .recent-blogs {
+        padding: 10px;
+        margin: 0 10px;
+
+        .recent-blogs-container {
+            flex-wrap: wrap;
+            flex-direction: column;
+            row-gap: 10px;
+
+            .most-recent {
+                width: 100%;
+            }
+
+            .recent-two {
+                width: 100%;
+
+                .recent-two-container {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+
+                    .m-img {
+                        width: 100%;
+                    }
+
+                    .blog-content {
+                        text-align: center;
+                        padding: 10px;
+                    }
+                }
+
+            }
+        }
+
+
+    }
+}
 }
