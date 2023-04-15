@@ -1,32 +1,25 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import NavBar from './component/navBar';
-import HomePage from './component/homePags';
-import Blogs from './component/allBlog';
-import SignUp from './component/signUp';
-import BlogForm from './component/blogForm';
-import PostPage from './component/postPage';
-import Login from './component/logIn';
-import './App.css';
-import Logout from './component/Logout';
-
+import NavBar from './components/navBar';
+import Footer from './components/footer';
+import LandingPage from './components/landingPage';
+import RegisterForm from './components/registerForm';
+import LoginForm from './components/loginForm';
+import PublishForm from './components/publishForm';
+import AllBlogs from './components/allBlogs';
 
 function App() {
   return (
     <React.Fragment>
       <NavBar />
-      <main className='container'>
-        <Routes>
-          <Route path='/' Component={HomePage} />
-          <Route path='/blog' Component={Blogs} />
-          <Route path='/blog/:id' Component={PostPage} />
-          <Route path='/sign-up' Component={SignUp} />
-          <Route path='/login' Component={Login} />
-          <Route path='/logout' Component={Logout} />
-          <Route path='/create-post/new-post' Component={BlogForm} />
-
-        </Routes>
-      </main>
+      <Routes>
+        <Route path='/' Component={LandingPage} />
+        <Route path='/register' Component={RegisterForm} />
+        <Route path='/login' Component={LoginForm} />
+        <Route path='/publish' Component={PublishForm} />
+        <Route path='/blog' Component={AllBlogs} />
+      </Routes>
+      <Footer />
     </React.Fragment >
   );
 }
