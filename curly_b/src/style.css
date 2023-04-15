@@ -204,6 +204,43 @@ body .recent-blogs .recent-blogs-container .recent-two .recent-two-container .bl
   color: #3B3B3B;
 }
 
+body .blogs-container {
+  padding: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 5%;
+  width: 90%;
+}
+
+body .blogs-container .blog-card {
+  width: 430px;
+  border: 1px solid #3B3B3B;
+  border-radius: 10px;
+}
+
+body .blogs-container .blog-card .card-img {
+  border-radius: 10px;
+}
+
+body .blogs-container .blog-card .card-content {
+  padding: 20px;
+}
+
+body .blogs-container .blog-card .card-content .blog-title {
+  font-weight: bold;
+}
+
+body .blogs-container .blog-card .card-content .timestamp {
+  color: #3B3B3B;
+}
+
 @media screen and (max-width: 820px) {
   body .nav-container {
     padding: 20px;
@@ -254,6 +291,60 @@ body .recent-blogs .recent-blogs-container .recent-two .recent-two-container .bl
   }
 }
 
+body #pb-form {
+  width: 50%;
+}
+
+body #pb-form #f-input {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+
+body #pb-form .quill {
+  margin: 0 auto;
+  width: 90%;
+  height: 300px;
+  margin-bottom: 5rem;
+}
+
+body #pb-form .input {
+  width: 90%;
+}
+
+body .form-container {
+  border: 2px solid #3B3B3B;
+  border-radius: 10px;
+  width: 30%;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+body .form-container .form-header {
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+body .form-container #form-btn {
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+body .form-container .input {
+  width: 95%;
+  height: 55px;
+  border-radius: 10px;
+  outline: none;
+  padding: 20px;
+  border: 2px solid #3B3B3B;
+  background: none;
+  margin-bottom: 10px;
+  color: #fff;
+  margin: 20px 0;
+}
+
 @media screen and (max-width: 871px) {
   body .recent-blogs {
     padding: 10px;
@@ -289,6 +380,102 @@ body .recent-blogs .recent-blogs-container .recent-two .recent-two-container .bl
   body .recent-blogs .recent-blogs-container .recent-two .recent-two-container .blog-content {
     text-align: center;
     padding: 10px;
+  }
+  body .form-container {
+    width: 70%;
+  }
+  body .form-container #form-btn {
+    width: 150px;
+  }
+  body .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  body .footer-container .header-content {
+    text-align: center;
+    margin: 0;
+  }
+  body .footer-container .social-lists {
+    display: inline;
+    margin: auto;
+  }
+  body .footer-container .social-lists .social-list {
+    text-align: center;
+  }
+  body #pb-form {
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-x: hidden;
+  }
+  body #pb-form .input {
+    width: 95%;
+  }
+  body #pb-form .quill {
+    width: 95%;
+    height: 300px;
+    margin-bottom: 6.5rem;
+  }
+}
+
+body .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  border-top: 2px solid #3B3B3B;
+  row-gap: 15px;
+  width: 100%;
+}
+
+body .footer-container .footer-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10%;
+}
+
+body .footer-container .social-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-right: 10%;
+}
+
+body .footer-container .social-lists .social-list {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 300px) {
+  body .hero-container .body-content .input {
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .form-container {
+    width: 90%;
+  }
+  body .form-container #form-btn {
+    width: 150px;
+  }
+  body #pb-form {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     const [clicked, setClicked] = useState(false);
@@ -9,10 +10,11 @@ const NavBar = () => {
         <div className="nav-container">
             <h1 className="nav-logo">{`{}.com`}</h1>
             <ul className="menu-lists" style={clicked ? { display: 'inline' } : {}}>
-                <li className="menu-list"><a href="#" className="menu-item">Home</a></li>
-                <li className="menu-list"><a href="#" className="menu-item">Blogs</a></li>
+                <li className="menu-list"><NavLink to='/' className="menu-item">Home</NavLink></li>
+                <li className="menu-list"><NavLink to="/blog" className="menu-item">Blogs</NavLink></li>
+                <li className="menu-list"><NavLink to='publish' className="menu-item">Write</NavLink></li>
             </ul>
-            <button className='btn' id='nav-btn'>SignIn</button>
+            <NavLink to='/login' className='btn' id='nav-btn'>SignIn</NavLink>
             <i
                 className={!clicked ? 'fa fa-bars' : 'fa fa-times'}
                 onClick={handleClick}
