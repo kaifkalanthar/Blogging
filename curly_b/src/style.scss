@@ -297,6 +297,7 @@ body {
         margin-bottom: 20px;
     }
 
+
     .input {
         width: 95%;
         height: 55px;
@@ -309,6 +310,9 @@ body {
         color: #fff;
         margin: 20px 0;
     }
+.error {
+    color: red;
+}
 }
 @media screen and (max-width: 871px) {
     .recent-blogs {
