@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Joi from 'joi-browser';
 import Form from './common/form';
 import * as userService from '../service/userService';
+import auth from '../service/authService';
 
 
 class RegisterForm extends Form {
@@ -20,7 +21,7 @@ class RegisterForm extends Form {
     doSubmit = async () => {
         try {
             const { headers } = await userService.register(this.state.data);
-            localStorage.setItem("token", headers["x-auth-token"]);
+            auth.loginWithJwt(headers["x-auth-token"]);
             window.location = '/';
         } catch (ex) {
             if (ex.response && ex.response.status === 400) {
