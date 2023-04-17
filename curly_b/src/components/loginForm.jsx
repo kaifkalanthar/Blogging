@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Form from './common/form';
 import Joi from 'joi-browser';
-import { login } from '../service/authService';
+import auth from '../service/authService';
 
 class LoginForm extends Form {
     state = {
@@ -16,9 +16,8 @@ class LoginForm extends Form {
     }
     doSubmit = async () => {
         try {
-            const { email, password } = this.state.data;
-            const { data: jwt } = await login(email, password);
-            localStorage.setItem("token", jwt);
+            const { data } = this.state;
+            await auth.login(data.email, data.password);
             window.location = "/";
         } catch (ex) {
             if (ex.response && ex.response.status === 400) {
