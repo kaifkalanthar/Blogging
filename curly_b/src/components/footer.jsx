@@ -6,7 +6,7 @@ import twitter from '../assets/twitter.svg';
 
 const Footer = () => {
     return (
-        <div className="footer-container">
+        <footer className="footer-container">
             <h1 className="footer-header">{`2099. { }.com All rights reserved.`}</h1>
             <ul className="social-lists">
                 <li className="social-list"><img src={github} alt=">" className="social-icons" /></li>
@@ -14,7 +14,7 @@ const Footer = () => {
                 <li className="social-list"><img src={dribble} alt=">" className="social-icons" /></li>
                 <li className="social-list"><img src={twitter} alt=">" className="social-icons" /></li>
             </ul>
-        </div>
+        </footer>
     );
 }
 

@@ -1,3 +1,4 @@
+const { Sign } = require('crypto');
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
@@ -5,7 +6,10 @@ const PostSchema = new Schema({
     title: String,
     summary: String,
     content: String,
-    cover: String,
+    cover: {
+        data: Buffer,
+        contentType: String
+    },
     author: { type: Schema.Types.ObjectId, ref: 'User' },
 }, {
     timestamps: true,

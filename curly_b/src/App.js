@@ -24,8 +24,10 @@ function App() {
         <Route path='/' Component={LandingPage} />
         <Route path='/login' element={!user ? <LoginForm /> : <Navigate to="/blog" />} />
         <Route path='/register' element={!user ? <RegisterForm /> : <Navigate to="/blog" />} />
-        <Route path='/publish' element={user && user.isAdmin ? <PublishForm /> : <Navigate to="/login" />} />
+        {/* <Route path='/publish' element={user && user.isAdmin ? <PublishForm /> : <Navigate to="/login" />} /> */}
+
         <Route path='/blog' Component={AllBlogs} />
+        <Route path='/publish' Component={PublishForm} />
         <Route path='/logout' Component={Logout} />
       </Routes>
       <Footer />
