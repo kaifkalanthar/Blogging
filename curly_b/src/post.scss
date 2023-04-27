@@ -1,0 +1,35 @@
+body {
+    .post-container {
+        text-align: center;
+        margin: 0 10%;
+
+        .post-header {
+            padding: 20px;
+        }
+
+        .post-img {
+            width: 70%;
+            height: auto;
+        }
+
+        .post-content {
+            text-align: start;
+            padding: 10px 0;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .post-container {
+            margin: 0 10px;
+
+            .post-header {
+                padding: 10px;
+            }
+
+            .post-img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
