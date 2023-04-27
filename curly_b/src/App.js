@@ -10,6 +10,7 @@ import AllBlogs from './components/allBlogs';
 import Logout from './components/logout';
 import auth from './service/authService';
 import ProtectRoute from './components/protectedRoutes';
+import BlogPage from './components/blogPage';
 
 function App() {
   const [user, setUser] = useState(false);
@@ -21,14 +22,13 @@ function App() {
     <React.Fragment>
       <NavBar user={user} />
       <Routes>
-        <Route path='/' Component={LandingPage} />
+        <Route path='/' element={<LandingPage />} />
         <Route path='/login' element={!user ? <LoginForm /> : <Navigate to="/blog" />} />
         <Route path='/register' element={!user ? <RegisterForm /> : <Navigate to="/blog" />} />
-        {/* <Route path='/publish' element={user && user.isAdmin ? <PublishForm /> : <Navigate to="/login" />} /> */}
-
-        <Route path='/blog' Component={AllBlogs} />
-        <Route path='/publish' Component={PublishForm} />
-        <Route path='/logout' Component={Logout} />
+        <Route path='/publish' element={user && user.isAdmin ? <PublishForm /> : <Navigate to="/login" />} />
+        <Route path='/blog' element={<AllBlogs />} />
+        <Route path='/blog/:id' element={<BlogPage />} />
+        <Route path='/logout' element={<Logout />} />
       </Routes>
       <Footer />
     </React.Fragment >

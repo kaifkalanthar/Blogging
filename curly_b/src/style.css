@@ -245,6 +245,7 @@ body .blogs-container .blog-card .card-content .timestamp {
   body .nav-container {
     padding: 20px;
     overflow-x: hidden;
+    overflow-y: scroll;
   }
   body .nav-container .nav-logo {
     font-size: 28px;
@@ -345,6 +346,10 @@ body .form-container .input {
   margin: 20px 0;
 }
 
+body .form-container .error {
+  color: red;
+}
+
 @media screen and (max-width: 871px) {
   body .recent-blogs {
     padding: 10px;
@@ -387,31 +392,6 @@ body .form-container .input {
   body .form-container #form-btn {
     width: 150px;
   }
-  body .footer-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-  }
-  body .footer-container .header-content {
-    text-align: center;
-    margin: 0;
-  }
-  body .footer-container .social-lists {
-    display: inline;
-    margin: auto;
-  }
-  body .footer-container .social-lists .social-list {
-    text-align: center;
-  }
   body #pb-form {
     width: 90%;
     -webkit-box-align: center;
@@ -430,22 +410,22 @@ body .form-container .input {
 }
 
 body .footer-container {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px;
-  border-top: 2px solid #3B3B3B;
-  row-gap: 15px;
-  width: 100%;
+  border-top: #3B3B3B 1px solid;
+  padding-top: 20px;
 }
 
 body .footer-container .footer-header {
-  font-size: 18px;
-  font-weight: bold;
-  margin-left: 10%;
+  font-size: 16px;
 }
 
 body .footer-container .social-lists {
@@ -453,12 +433,10 @@ body .footer-container .social-lists {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  margin-right: 10%;
 }
 
 body .footer-container .social-lists .social-list {
-  margin-right: 20px;
-  cursor: pointer;
+  padding-right: 10px;
 }
 
 @media screen and (max-width: 300px) {
@@ -477,5 +455,17 @@ body .footer-container .social-lists .social-list {
   body #pb-form {
     width: 90%;
   }
+}
+
+body .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

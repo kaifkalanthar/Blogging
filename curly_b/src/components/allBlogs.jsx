@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import saul from '../assets/saul.webp';
+import { NavLink } from 'react-router-dom';
 import http from '../service/httpService';
 import apiUrl from '../config.json';
 const AllBlogs = () => {
@@ -8,9 +9,8 @@ const AllBlogs = () => {
     const getData = async () => {
         const { apiUrl: ApiUrl } = apiUrl;
         const apiEndpoint = ApiUrl + "api/post";
-        const { data } = await http.get("http://localhost:4000/api/post");
-        console.log(data);
-        setData(data);
+        const { data: res } = await http.get("http://localhost:4000/post");
+        setData(res);
     }
     useEffect(() => {
         getData();
@@ -19,12 +19,12 @@ const AllBlogs = () => {
         <div className="blogs-container">
             {data.map(d => (
                 <div className="blog-card" key={d._id}>
-                    <img src={"http://localhost:4000/api/"} alt="" className="card-img" />
+                    <img src={"http://localhost:4000/" + d.cover} alt="" className="card-img" />
                     <div className="card-content">
                         <h2 className="blog-title">{d.title}</h2>
                         <p className="timestamp">MohamedKaif. 31 Jan</p>
                         <p className="blog-description">{d.summary}</p>
-                        <button className="btn">More...</button>
+                        <NavLink className="btn" to={`/blog/${d._id}`}>More...</NavLink>
                     </div>
                 </div>
             ))}
