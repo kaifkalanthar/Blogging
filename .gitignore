@@ -1,3 +1,4 @@
 /api/node_modules/
 /api/.env
 /curly_b/.env
+/curly_b/node_modules/
