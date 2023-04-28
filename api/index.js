@@ -18,7 +18,7 @@ const uploadMiddleware = multer({ dest: 'uploads/' });
 const port = process.env.PORT;
 const db = process.env.MONGODB_URL;
 
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: ['http://localhost:3000','https://curly-b-xgc0.onrender.com/'] }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
