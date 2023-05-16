@@ -19,7 +19,7 @@ const AllBlogs = () => {
         <div className="blogs-container">
             {data.map(d => (
                 <div className="blog-card" key={d._id}>
-                    <img src={"https://curly-b-xgc0.onrender.com/" + d.cover} alt="" className="card-img" />
+                    <img src={"https://curly-b-api.onrender.com/" + d.cover} alt="" className="card-img" />
                     <div className="card-content">
                         <h2 className="blog-title">{d.title}</h2>
                         <p className="timestamp">MohamedKaif. 31 Jan</p>
