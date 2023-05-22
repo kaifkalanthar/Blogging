@@ -8,7 +8,7 @@ const BlogPage = () => {
     const [postInfo, setPostInfo] = useState(false);
     const { id } = useParams();
     const getData = async () => {
-        const { data } = await http.get(`https://curly-b-api.onrender.com//post/${id}`);
+        const { data } = await http.get(`https://curly-b-api.onrender.com/post/${id}`);
         setPostInfo(data);
     }
     useEffect(() => {
