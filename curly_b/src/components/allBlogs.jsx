@@ -18,10 +18,8 @@ const AllBlogs = () => {
     useEffect(() => {
         getData();
 
-    }, [data])
-
-    },[])
-
+    }, [data]);
+    
     return ( 
         <div className="blogs-container">
             {data.map(d => (
