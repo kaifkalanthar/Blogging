@@ -27,13 +27,14 @@ const PublishForm = () => {
 
     const doSubmit = async (e) => {
         e.preventDefault();
-
+        const { apiUrl: ApiUrl } = apiUrl;
+        const apiEndpoint = ApiUrl + "post";
         let data = new FormData();
         data.append('title', title);
         data.append('summary', summary);
         data.append('files', files[0]);
         data.append('content', content);
-        const res = await http.post(apiUrl + 'post', data);
+        const res = await http.post(apiEndpoint, data);
     }
 
 
