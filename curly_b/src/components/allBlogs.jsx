@@ -8,9 +8,6 @@ const AllBlogs = () => {
     const apiEndpoint = ApiUrl + "post";
 
     const getData = async () => {
-
-        const { data: res } = await http.get(apiEndpoint);
-
         const { apiUrl: ApiUrl } = apiUrl;
         const apiEndpoint = ApiUrl + "api/post";
         const { data: res } = await http.get("https://curly-b-api.onrender.com/post");
