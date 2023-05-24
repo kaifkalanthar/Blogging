@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import saul from '../assets/saul.webp';
 import { NavLink } from 'react-router-dom';
 import http from '../service/httpService';
 import apiUrl from '../config.json';
@@ -9,15 +8,13 @@ const AllBlogs = () => {
     const apiEndpoint = ApiUrl + "post";
 
     const getData = async () => {
-
         const { data: res } = await http.get(apiEndpoint);
         setData(res);
+        console.log(res);
     }
     useEffect(() => {
         getData();
-    }, [])
-
-
+    }, [data])
     return ( 
         <div className="blogs-container">
             {data.map(d => (
