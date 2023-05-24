@@ -33,8 +33,7 @@ const PublishForm = () => {
         data.append('summary', summary);
         data.append('files', files[0]);
         data.append('content', content);
-        const res = await http.post('http://localhost:4000/post', data);
-
+        const res = await http.post(apiUrl + 'post', data);
     }
 
 
