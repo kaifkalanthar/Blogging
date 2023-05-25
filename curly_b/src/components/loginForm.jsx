@@ -4,6 +4,8 @@ import Form from './common/form';
 import Joi from 'joi-browser';
 import auth from '../service/authService';
 
+
+
 class LoginForm extends Form {
     state = {
         data: { email: "", password: "" },
@@ -19,6 +21,8 @@ class LoginForm extends Form {
             const { data } = this.state;
             await auth.login(data.email, data.password);
             window.location = "/";
+
+
         } catch (ex) {
             if (ex.response && ex.response.status === 400) {
                 const errors = { ...this.state.errors };
@@ -26,7 +30,6 @@ class LoginForm extends Form {
                 this.setState({ errors });
             }
         }
-
     }
     render() {
         return (
