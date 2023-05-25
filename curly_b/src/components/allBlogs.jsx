@@ -2,27 +2,32 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import http from '../service/httpService';
 import apiUrl from '../config.json';
+import CardSkeleton from './SkeletonComponent/cardSkeleton';
 const AllBlogs = () => {
     const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const skeletons = [1, 2, 3, 4, 5, 6, 7, 8];
     const { apiUrl: ApiUrl } = apiUrl;
     const apiEndpoint = ApiUrl + "post";
 
     const getData = async () => {
+        setIsLoading(true);
         const { apiUrl: ApiUrl } = apiUrl;
         const apiEndpoint = ApiUrl + "api/post";
-        const { data: res } = await http.get("https://curly-b-api.onrender.com/post");
-
-        setData(res);
-        console.log(res);
+        await http.get("https://curly-b-api.onrender.com/post")
+            .then(res => {
+                setData(res.data);
+                setIsLoading(false);
+            });
     }
     useEffect(() => {
         getData();
-
-    }, [data]);
+    }, []);
     
     return ( 
         <div className="blogs-container">
-            {data.map(d => (
+            {isLoading && skeletons.map(skeleton => <CardSkeleton key={skeleton} />)}
+            {data.slice(0).reverse().map(d => (
                 <div className="blog-card" key={d._id}>
                     <img src={ApiUrl + d.cover} alt="" className="card-img" />
                     <div className="card-content">

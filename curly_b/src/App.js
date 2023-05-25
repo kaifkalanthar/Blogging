@@ -12,6 +12,7 @@ import auth from './service/authService';
 import ProtectRoute from './components/protectedRoutes';
 import BlogPage from './components/blogPage';
 
+
 function App() {
   const [user, setUser] = useState(false);
   useEffect(() => {
